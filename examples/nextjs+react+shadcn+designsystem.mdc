@@ -1,0 +1,352 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# NextJS + React + Shadcn/ui Design System Generator
+
+> **Template Version**: 1.0  
+> **Last Updated**: December 2024  
+> **Contributor**: PromptFoundry Team
+
+## 📋 Description
+
+Generate a modern, production-ready NextJS application with a comprehensive design system, UI component library, and beautiful landing page templates. This prompt creates a complete foundation for building scalable web applications with consistent design patterns, strict 8px grid compliance, and accessibility standards.
+
+- **Primary purpose**: Create complete NextJS applications with integrated design systems
+- **Target audience**: Frontend developers, design system architects, and full-stack teams
+- **Problem solved**: Eliminates the complexity of setting up design systems and component libraries from scratch
+- **Key benefits**: Consistent design patterns, accessibility compliance, developer experience optimization
+
+## 🛠️ Tool Compatibility
+
+- [x] **Cursor** - IDE-specific functionality with .cursorrules integration
+- [x] **V0.dev** - UI component generation
+- [x] **Windsurf** - Full-stack development
+- [x] **Lovable** - Rapid prototyping
+- [x] **Universal** - Works across multiple tools
+
+## 🏷️ Category
+
+**Primary**: Code Generation
+
+**Secondary**: UI/UX Design, Full-Stack Development
+
+## 🎯 Use Cases
+
+- **Design System Creation**: Build comprehensive design systems with strict grid compliance
+- **Component Library Development**: Create reusable UI component libraries
+- **Landing Page Templates**: Generate conversion-optimized landing pages
+- **Enterprise Applications**: Develop scalable applications with consistent patterns
+
+## 📝 The Prompt
+
+```
+Create a modern, production-ready NextJS application with a comprehensive design system, UI component library, and beautiful landing page templates. This project should serve as a foundation for building scalable web applications with consistent design patterns.
+
+Project Name: [PROJECT_NAME]
+Primary Use Case: [PRIMARY_USE_CASE]
+Design Theme: [DESIGN_THEME]
+Target Audience: [TARGET_AUDIENCE]
+
+## 🎯 Core Requirements
+
+### Technology Stack
+- **Framework**: Next.js 14+ with App Router
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS with custom design tokens
+- **UI Components**: Shadcn/ui + Radix UI primitives
+- **Icons**: Lucide React
+- **Development**: Storybook for component documentation
+- **Testing**: Jest + React Testing Library
+- **Code Quality**: ESLint + Prettier with Tailwind plugin
+
+### Project Structure
+```
+[PROJECT_NAME]/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx (landing page)
+│   └── templates/
+│       └── landing/
+├── components/
+│   ├── ui/ (shadcn/ui components)
+│   └── design-system/ (custom components)
+├── lib/
+│   ├── utils.ts
+│   └── design-system/
+│       ├── spacing.ts
+│       ├── tokens.ts
+│       ├── use-design-system.ts
+│       ├── enforcement.ts
+│       ├── ux-guidelines.ts
+│       ├── variants.ts
+│       └── index.ts
+├── public/
+│   └── images/
+│       └── logo/
+├── docs/
+├── .cursorrules
+├── tailwind.config.js
+├── components.json
+├── package.json
+└── README.md
+```
+
+## 🎨 Design System Requirements
+
+### 8px Grid System (CRITICAL)
+- **Enforce strict 8px grid compliance** for all spacing
+- Use multiples of 8px: 8px, 16px, 24px, 32px, 48px, 64px, 96px
+- Never use: 5px, 7px, 9px, 10px, 15px, 22px, 30px, 35px
+- Create semantic spacing tokens for consistent usage
+
+### Touch Target Standards
+- **Minimum touch targets**: 44px (iOS) / 48px (Material Design)
+- Interactive elements must meet accessibility requirements
+- Custom Tailwind utilities: `h-touch-sm`, `h-touch-md`, `h-touch-lg`, `h-touch-xl`
+
+### Color System
+- Primary palette: [PRIMARY_COLOR] (default: Purple-based #a855f7)
+- Secondary palette: [SECONDARY_COLOR] (default: Blue-based #3b82f6)
+- Support for light/dark modes
+- WCAG AA compliant contrast ratios (4.5:1 minimum)
+- Industry-specific colors if applicable
+
+### Typography Scale
+- Consistent font sizes with proper line heights
+- Optimal reading widths: `max-w-prose` (65ch)
+- Responsive typography patterns
+
+## 📦 Implementation Requirements
+
+### 1. Design System Core Files
+Create comprehensive design system with:
+- 8px grid system with semantic spacing tokens
+- React hooks for design system validation and enforcement
+- Touch target validation
+- Accessibility checks
+- Development tools for grid overlay and validation
+
+### 2. Tailwind Configuration
+Extend Tailwind with design system tokens:
+- Custom spacing scale based on 8px grid
+- Touch target utilities
+- Semantic color palette
+- Typography scale
+- Z-index scale
+- Responsive breakpoints
+
+### 3. Landing Page Template
+Create a modern, conversion-optimized landing page with:
+- Hero section with compelling CTA
+- Company logos section
+- Features showcase with icons
+- Product statistics/metrics
+- FAQ section with accordion
+- Footer with navigation links
+
+### 4. UI Component Library
+Implement shadcn/ui components with design system integration:
+- Button variants (primary, secondary, ghost, destructive)
+- Form components (input, textarea, select, checkbox)
+- Navigation components (navbar, sidebar, breadcrumbs)
+- Feedback components (alert, toast, progress)
+- Layout components (card, container, grid)
+
+### 5. Development Tools
+- Storybook configuration for component documentation
+- Jest setup for testing
+- ESLint + Prettier configuration
+- Design system validation tools
+- Grid overlay for development
+
+### 6. Cursor Rules (.cursorrules)
+Create comprehensive Cursor rules that enforce:
+- 8px grid system compliance
+- Touch target requirements (≥44px)
+- Semantic spacing usage over hardcoded values
+- Design system hook integration
+- TypeScript best practices
+- Accessibility standards (WCAG AA)
+- Component validation patterns
+
+## 🔧 Quality Standards
+
+### Code Quality
+- TypeScript strict mode
+- 100% type coverage
+- ESLint + Prettier formatting
+- Consistent import patterns
+- Proper error handling
+
+### Performance
+- Optimized bundle size
+- Lazy loading where appropriate
+- Image optimization
+- Development vs production builds
+
+### Accessibility
+- WCAG AA compliance
+- Keyboard navigation
+- Screen reader support
+- Focus management
+- Color contrast validation
+
+### Testing
+- Unit tests for utilities
+- Component testing with React Testing Library
+- Visual regression testing with Storybook
+- Accessibility testing
+
+## 📚 Documentation Requirements
+
+Generate comprehensive documentation including:
+- Project overview and features
+- Installation instructions
+- Development workflow
+- Customization guide
+- Component usage examples
+- Design system principles
+- 8px grid system explanation
+- Color palette and usage
+- Typography scale
+- Component variants
+- Accessibility guidelines
+- Best practices
+
+## 🚀 Success Criteria
+
+The project should:
+1. ✅ Build and run without errors
+2. ✅ Pass all linting and type checking
+3. ✅ Have a beautiful, responsive landing page
+4. ✅ Include comprehensive UI component library
+5. ✅ Enforce design system consistency automatically
+6. ✅ Meet accessibility standards
+7. ✅ Include development tools and documentation
+8. ✅ Be production-ready and scalable
+
+Make the system extensible for future components, include real-world examples and use cases, focus on maintainability and scalability, and document all design decisions and patterns.
+```
+
+## 💡 Example Usage
+
+### Scenario
+You need to create a SaaS application landing page with a comprehensive design system for a fintech startup.
+
+### Input
+```
+Project Name: FinanceFlow
+Primary Use Case: SaaS Landing Page with Design System
+Design Theme: Modern, Professional, Trustworthy
+Target Audience: Financial professionals and small business owners
+Primary Color: Emerald-based #10b981
+Secondary Color: Slate-based #64748b
+```
+
+### Expected Output
+A complete NextJS application with:
+- Fintech-themed landing page with trust indicators
+- Comprehensive design system with emerald color palette
+- Financial industry-specific components (pricing tables, feature comparisons)
+- Strict 8px grid compliance
+- WCAG AA accessibility standards
+- Professional typography and spacing
+- Storybook documentation
+- Complete test suite
+
+## 🎨 Customization Options
+
+### Variables to Replace
+- `[PROJECT_NAME]`: The name of your project
+- `[PRIMARY_USE_CASE]`: Main purpose of the application
+- `[DESIGN_THEME]`: Visual style and aesthetic direction
+- `[TARGET_AUDIENCE]`: Primary users of the application
+- `[PRIMARY_COLOR]`: Main brand color
+- `[SECONDARY_COLOR]`: Supporting brand color
+
+### Optional Modifications
+- **For E-commerce**: Add product-specific components and color schemes
+- **For Healthcare**: Include HIPAA-compliant patterns and medical UI components
+- **For Education**: Add learning-focused components and accessibility features
+- **For Enterprise**: Include complex data visualization and dashboard components
+
+## ✅ Best Practices
+
+### Do's
+- ✅ Always enforce 8px grid system compliance
+- ✅ Use semantic spacing tokens instead of hardcoded values
+- ✅ Implement comprehensive accessibility testing
+- ✅ Create reusable component variants
+- ✅ Document all design decisions and patterns
+
+### Don'ts
+- ❌ Don't use non-8px spacing values
+- ❌ Don't skip touch target validation for interactive elements
+- ❌ Don't ignore color contrast requirements
+- ❌ Don't create components without proper TypeScript types
+- ❌ Don't skip documentation for custom components
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Issue 1**: Components not following 8px grid
+- **Solution**: Use the design system validation hooks and Cursor rules
+- **Prevention**: Set up development tools with grid overlay
+
+**Issue 2**: Poor accessibility scores
+- **Solution**: Implement proper ARIA labels and keyboard navigation
+- **Prevention**: Use accessibility testing tools in development
+
+**Issue 3**: Inconsistent component styling
+- **Solution**: Leverage design system tokens and variants
+- **Prevention**: Create comprehensive Storybook documentation
+
+### Performance Tips
+- Use Next.js Image component for optimized images
+- Implement proper code splitting and lazy loading
+- Optimize Tailwind CSS with purging unused styles
+
+## 📊 Success Metrics
+
+How to measure if this prompt is working well:
+- **Design Consistency**: All components follow 8px grid system
+- **Accessibility**: Meets WCAG AA standards (4.5:1 contrast ratio)
+- **Performance**: Lighthouse scores above 90 for all metrics
+- **Developer Experience**: Fast development with comprehensive tooling
+
+## 🔗 Related Prompts
+
+- **[React Component Generator](mdc:../prompts/cursor/code-generation/react-component-generator.md)** - Generate individual components
+- **[Storybook Setup](mdc:../prompts/universal/documentation/storybook-setup.md)** - Component documentation
+- **[Accessibility Audit](mdc:../workflows/agents/accessibility-audit.md)** - Accessibility validation
+
+## 📚 Additional Resources
+
+- [Next.js Documentation](mdc:https:/nextjs.org/docs) - Framework documentation
+- [Shadcn/ui Components](mdc:https:/ui.shadcn.com) - UI component library
+- [Tailwind CSS](mdc:https:/tailwindcss.com) - Utility-first CSS framework
+- [Radix UI](mdc:https:/www.radix-ui.com) - Unstyled, accessible components
+- [8-Point Grid System](mdc:https:/spec.fm/specifics/8-pt-grid) - Design system principles
+
+## 🏷️ Tags
+
+`nextjs` `react` `shadcn` `design-system` `tailwind` `typescript` `accessibility` `ui-components`
+
+## 📝 Changelog
+
+### v1.0 - December 2024
+- Initial version
+- Complete NextJS + Design System setup
+- 8px grid system enforcement
+- Accessibility compliance
+- Comprehensive documentation
+
+---
+
+**💡 Pro Tip**: Start with the design system core files before building components. This ensures consistency from the beginning and makes development faster.
+
+**🤝 Contribution**: Found this helpful? Consider contributing your own design system patterns or improvements!
