@@ -73,7 +73,7 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm border-b border-gray-200">
+    <nav class="bg-white shadow-lg border-b border-gray-200 fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -81,10 +81,29 @@
                     <span class="ml-2 text-xl font-bold text-gray-900">PromptFoundry</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
-                    <a href="#tools" class="text-gray-600 hover:text-gray-900 transition-colors">Tools</a>
-                    <a href="#examples" class="text-gray-600 hover:text-gray-900 transition-colors">Examples</a>
-                    <a href="https://github.com/saran-io/promptfoundry" class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors font-medium">Features</a>
+                    <a href="#tools" class="text-gray-600 hover:text-gray-900 transition-colors font-medium">Tools</a>
+                    <a href="#examples" class="text-gray-600 hover:text-gray-900 transition-colors font-medium">Examples</a>
+                    <a href="https://github.com/saran-io/promptfoudry" class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium">
+                        View on GitHub
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors font-medium py-2">Features</a>
+                    <a href="#tools" class="text-gray-600 hover:text-gray-900 transition-colors font-medium py-2">Tools</a>
+                    <a href="#examples" class="text-gray-600 hover:text-gray-900 transition-colors font-medium py-2">Examples</a>
+                    <a href="https://github.com/saran-io/promptfoudry" class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium text-center">
                         View on GitHub
                     </a>
                 </div>
@@ -93,7 +112,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="gradient-bg hero-pattern text-white py-20">
+    <section class="gradient-bg hero-pattern text-white py-20 pt-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="animate-float">
                 <h1 class="text-5xl md:text-6xl font-bold mb-6">
@@ -294,7 +313,7 @@ Props: <br>
                     </svg>
                     View on GitHub
                 </a>
-                <a href="https://github.com/saran-io/promptfoundry/blob/main/docs/getting-started.md" 
+                <a href="https://github.com/saran-io/promptfoudry/blob/main/docs/getting-started.md" 
                    class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
                     Documentation
                 </a>
@@ -330,19 +349,19 @@ Props: <br>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Resources</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://github.com/saran-io/promptfoundry/blob/main/docs/getting-started.md" class="hover:text-white transition-colors">Getting Started</a></li>
-                        <li><a href="https://github.com/saran-io/promptfoundry/blob/main/CONTRIBUTING.md" class="hover:text-white transition-colors">Contributing</a></li>
-                        <li><a href="https://github.com/saran-io/promptfoundry/blob/main/examples/real-world-usage.md" class="hover:text-white transition-colors">Examples</a></li>
-                        <li><a href="https://github.com/saran-io/promptfoundry/blob/main/templates/prompt-template.md" class="hover:text-white transition-colors">Templates</a></li>
+                        <li><a href="https://github.com/saran-io/promptfoudry/blob/main/docs/getting-started.md" class="hover:text-white transition-colors">Getting Started</a></li>
+                        <li><a href="https://github.com/saran-io/promptfoudry/blob/main/CONTRIBUTING.md" class="hover:text-white transition-colors">Contributing</a></li>
+                        <li><a href="https://github.com/saran-io/promptfoudry/blob/main/examples/real-world-usage.md" class="hover:text-white transition-colors">Examples</a></li>
+                        <li><a href="https://github.com/saran-io/promptfoudry/blob/main/templates/prompt-template.md" class="hover:text-white transition-colors">Templates</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Tools</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://github.com/saran-io/promptfoundry/tree/main/prompts/cursor" class="hover:text-white transition-colors">Cursor Prompts</a></li>
-                        <li><a href="https://github.com/saran-io/promptfoundry/tree/main/prompts/v0" class="hover:text-white transition-colors">V0.dev Prompts</a></li>
-                        <li><a href="https://github.com/saran-io/promptfoundry/tree/main/prompts/windsurf" class="hover:text-white transition-colors">Windsurf Prompts</a></li>
-                        <li><a href="https://github.com/saran-io/promptfoundry/tree/main/prompts/lovable" class="hover:text-white transition-colors">Lovable Prompts</a></li>
+                        <li><a href="https://github.com/saran-io/promptfoudry/tree/main/prompts/cursor" class="hover:text-white transition-colors">Cursor Prompts</a></li>
+                        <li><a href="https://github.com/saran-io/promptfoudry/tree/main/prompts/v0" class="hover:text-white transition-colors">V0.dev Prompts</a></li>
+                        <li><a href="https://github.com/saran-io/promptfoudry/tree/main/prompts/windsurf" class="hover:text-white transition-colors">Windsurf Prompts</a></li>
+                        <li><a href="https://github.com/saran-io/promptfoudry/tree/main/prompts/lovable" class="hover:text-white transition-colors">Lovable Prompts</a></li>
                     </ul>
                 </div>
             </div>
@@ -353,23 +372,52 @@ Props: <br>
     </footer>
 
     <script>
-        // Smooth scrolling for anchor links
+        // Mobile menu toggle function
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links with offset for fixed header
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerHeight = 64; // Height of fixed header
+                const targetPosition = target.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
             });
         });
 
-        // Add some interactivity
+        // Enhanced header shadow on scroll
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('shadow-lg');
-            } else {
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-xl');
                 nav.classList.remove('shadow-lg');
+            } else {
+                nav.classList.add('shadow-lg');
+                nav.classList.remove('shadow-xl');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.querySelector('[onclick="toggleMobileMenu()"]');
+            
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
             }
         });
     </script>
