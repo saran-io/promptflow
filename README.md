@@ -1,16 +1,16 @@
-# 🔥 PromptFoundry
+# 🔥 PromptFlow
 
 > Your curated hub for high-quality, production-ready prompts for AI developer tools
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/promptfoundry.svg)](https://github.com/yourusername/promptfoundry/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/promptfoudry.svg)](https://github.com/yourusername/promptfoudry/stargazers)
 
-PromptFoundry is your curated hub for high-quality, production-ready prompts for AI developer tools like **Cursor**, **V0.dev**, **Windsurf**, and **Lovable** — purpose-built for modern AI engineering, agentic workflows, automation, and rapid UI development.
+PromptFlow is your curated hub for high-quality, production-ready prompts for AI developer tools like **Cursor**, **V0.dev**, **Windsurf**, and **Lovable** — purpose-built for modern AI engineering, agentic workflows, automation, and rapid UI development.
 
-Whether you're a beginner experimenting with AI tooling or a senior engineer building agentic systems, PromptFoundry provides clear, reusable, and field-tested prompt recipes to accelerate your work and improve outcomes.
+Whether you're a beginner experimenting with AI tooling or a senior engineer building agentic systems, PromptFlow provides clear, reusable, and field-tested prompt recipes to accelerate your work and improve outcomes.
 
-## 🚀 Why PromptFoundry?
+## 🚀 Why PromptFlow?
 
 ### 🔧 Tool-Specific Prompt Libraries
 Well-structured prompt sets tailored for each tool (Cursor, V0.dev, Windsurf, Lovable)
@@ -27,7 +27,7 @@ Prompts follow consistent structure, categories, and formats to scale across tea
 ## 📁 Repository Structure
 
 ```
-promptfoundry/
+promptflow/
 ├── prompts/
 │   ├── cursor/              # Cursor IDE prompts
 │   ├── v0/                  # V0.dev prompts
@@ -99,9 +99,9 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 ## 🌟 Community
 
-- **Discord**: [Join our community](https://discord.gg/promptfoundry)
-- **Twitter**: [@PromptFoundry](https://twitter.com/promptfoundry)
-- **Blog**: [Latest updates and tutorials](https://blog.promptfoundry.dev)
+- **Discord**: [Join our community](https://discord.gg/promptflow)
+- **Twitter**: [@PromptFlow](https://twitter.com/promptflow)
+- **Blog**: [Latest updates and tutorials](https://blog.promptflow.dev)
 
 ## 📄 License
 
@@ -109,7 +109,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Thanks to all contributors who help make PromptFoundry better
+- Thanks to all contributors who help make PromptFlow better
 - Inspired by the amazing AI developer tools community
 - Built with ❤️ for the future of AI-assisted development
 
