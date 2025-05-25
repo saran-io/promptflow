@@ -77,23 +77,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <!-- Bird Logo SVG -->
-                    <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23 11.5c0-.8-.4-1.5-1-1.9-.1-.1-.2-.1-.3-.2.1-.3.2-.6.2-.9 0-1.4-1.1-2.5-2.5-2.5-.4 0-.8.1-1.1.3-.7-1.4-2.1-2.3-3.7-2.3-1.8 0-3.4 1.2-3.9 2.9-.2-.1-.5-.1-.7-.1-1.4 0-2.5 1.1-2.5 2.5 0 .3.1.6.2.9-.1.1-.2.1-.3.2-.6.4-1 1.1-1 1.9 0 .5.2 1 .5 1.4.1.1.2.2.3.3-.1.3-.2.6-.2.9 0 1.4 1.1 2.5 2.5 2.5.4 0 .8-.1 1.1-.3.7 1.4 2.1 2.3 3.7 2.3 1.8 0 3.4-1.2 3.9-2.9.2.1.5.1.7.1 1.4 0 2.5-1.1 2.5-2.5 0-.3-.1-.6-.2-.9.1-.1.2-.2.3-.3.3-.4.5-.9.5-1.4zm-8.5-2.5c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5zm-5 0c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5z"/>
-                    </svg>
+                    <!-- Origami Bird Logo SVG in Square -->
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L8 6v4l4-2 4 2V6l-4-4zm0 8l-6 3v7l6-3 6 3v-7l-6-3z"/>
+                        </svg>
+                    </div>
                     <span class="ml-3 text-xl font-bold text-black">PromptFoundry</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-black hover:text-gray-700 transition-colors font-medium">Features</a>
-                    <a href="#tools" class="text-black hover:text-gray-700 transition-colors font-medium">Tools</a>
-                    <a href="#examples" class="text-black hover:text-gray-700 transition-colors font-medium">Examples</a>
+                    <a href="#features" class="text-black hover:text-gray-600 transition-colors font-medium">Features</a>
+                    <a href="#tools" class="text-black hover:text-gray-600 transition-colors font-medium">Tools</a>
+                    <a href="#examples" class="text-black hover:text-gray-600 transition-colors font-medium">Examples</a>
                     <a href="https://github.com/saran-io/promptfoudry" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-medium">
                         View on GitHub
                     </a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button type="button" class="text-black hover:text-gray-700 focus:outline-none focus:text-gray-700" onclick="toggleMobileMenu()">
+                    <button type="button" class="text-black hover:text-gray-600 focus:outline-none focus:text-gray-600" onclick="toggleMobileMenu()">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -103,9 +105,9 @@
             <!-- Mobile menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="#features" class="text-black hover:text-gray-700 transition-colors font-medium py-2">Features</a>
-                    <a href="#tools" class="text-black hover:text-gray-700 transition-colors font-medium py-2">Tools</a>
-                    <a href="#examples" class="text-black hover:text-gray-700 transition-colors font-medium py-2">Examples</a>
+                    <a href="#features" class="text-black hover:text-gray-600 transition-colors font-medium py-2">Features</a>
+                    <a href="#tools" class="text-black hover:text-gray-600 transition-colors font-medium py-2">Tools</a>
+                    <a href="#examples" class="text-black hover:text-gray-600 transition-colors font-medium py-2">Examples</a>
                     <a href="https://github.com/saran-io/promptfoudry" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-medium text-center">
                         View on GitHub
                     </a>
@@ -119,10 +121,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="animate-float">
                 <div class="flex justify-center mb-6">
-                    <!-- Large Bird Logo for Hero -->
-                    <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23 11.5c0-.8-.4-1.5-1-1.9-.1-.1-.2-.1-.3-.2.1-.3.2-.6.2-.9 0-1.4-1.1-2.5-2.5-2.5-.4 0-.8.1-1.1.3-.7-1.4-2.1-2.3-3.7-2.3-1.8 0-3.4 1.2-3.9 2.9-.2-.1-.5-.1-.7-.1-1.4 0-2.5 1.1-2.5 2.5 0 .3.1.6.2.9-.1.1-.2.1-.3.2-.6.4-1 1.1-1 1.9 0 .5.2 1 .5 1.4.1.1.2.2.3.3-.1.3-.2.6-.2.9 0 1.4 1.1 2.5 2.5 2.5.4 0 .8-.1 1.1-.3.7 1.4 2.1 2.3 3.7 2.3 1.8 0 3.4-1.2 3.9-2.9.2.1.5.1.7.1 1.4 0 2.5-1.1 2.5-2.5 0-.3-.1-.6-.2-.9.1-.1.2-.2.3-.3.3-.4.5-.9.5-1.4zm-8.5-2.5c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5zm-5 0c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5z"/>
-                    </svg>
+                    <!-- Large Origami Bird Logo for Hero -->
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                        <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L8 6v4l4-2 4 2V6l-4-4zm0 8l-6 3v7l6-3 6 3v-7l-6-3z"/>
+                        </svg>
+                    </div>
                 </div>
                 <h1 class="text-5xl md:text-6xl font-bold mb-6">
                     PromptFoundry
@@ -336,10 +340,12 @@ Props: <br>
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="col-span-2">
                     <div class="flex items-center mb-4">
-                        <!-- Bird Logo SVG for Footer -->
-                        <svg class="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M23 11.5c0-.8-.4-1.5-1-1.9-.1-.1-.2-.1-.3-.2.1-.3.2-.6.2-.9 0-1.4-1.1-2.5-2.5-2.5-.4 0-.8.1-1.1.3-.7-1.4-2.1-2.3-3.7-2.3-1.8 0-3.4 1.2-3.9 2.9-.2-.1-.5-.1-.7-.1-1.4 0-2.5 1.1-2.5 2.5 0 .3.1.6.2.9-.1.1-.2.1-.3.2-.6.4-1 1.1-1 1.9 0 .5.2 1 .5 1.4.1.1.2.2.3.3-.1.3-.2.6-.2.9 0 1.4 1.1 2.5 2.5 2.5.4 0 .8-.1 1.1-.3.7 1.4 2.1 2.3 3.7 2.3 1.8 0 3.4-1.2 3.9-2.9.2.1.5.1.7.1 1.4 0 2.5-1.1 2.5-2.5 0-.3-.1-.6-.2-.9.1-.1.2-.2.3-.3.3-.4.5-.9.5-1.4zm-8.5-2.5c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5zm-5 0c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5z"/>
-                        </svg>
+                        <!-- Origami Bird Logo SVG for Footer -->
+                        <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L8 6v4l4-2 4 2V6l-4-4zm0 8l-6 3v7l6-3 6 3v-7l-6-3z"/>
+                            </svg>
+                        </div>
                         <span class="ml-3 text-xl font-bold">PromptFoundry</span>
                     </div>
                     <p class="text-gray-400 mb-4">
