@@ -1,6 +1,6 @@
-# Contributing to PromptFoundry
+# Contributing to PromptFlow
 
-Thank you for your interest in contributing to PromptFoundry! This guide will help you get started with contributing high-quality prompts and improvements to our community-driven repository.
+Thank you for your interest in contributing to PromptFlow! This guide will help you get started with contributing high-quality prompts and improvements to our community-driven repository.
 
 ## 🎯 How to Contribute
 
@@ -69,8 +69,8 @@ Describe what kind of output this prompt typically generates.
 
 ```bash
 # Fork the repository on GitHub, then clone your fork
-git clone https://github.com/yourusername/promptfoundry.git
-cd promptfoundry
+git clone https://github.com/yourusername/promptfoudry.git
+cd promptfoudry
 ```
 
 ### 2. Create a Branch
@@ -226,4 +226,4 @@ Contributors will be:
 
 ---
 
-Thank you for helping make PromptFoundry better for everyone! 🚀 
+Thank you for helping make PromptFlow better for everyone! 🚀 

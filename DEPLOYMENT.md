@@ -1,4 +1,4 @@
-# PromptFoundry Landing Page Deployment
+# PromptFlow Landing Page Deployment
 
 This repository includes a professional landing page that can be hosted on GitHub Pages.
 
@@ -50,9 +50,9 @@ Once deployed, you can add this to your LinkedIn profile:
 1. Go to your LinkedIn profile
 2. Click "Add profile section" → "Recommended" → "Add projects"
 3. Fill in:
-   - **Project name**: PromptFoundry
+   - **Project name**: PromptFlow
    - **Description**: "Open-source curated hub for production-ready AI development prompts. Accelerates development with battle-tested prompt recipes for Cursor, V0.dev, Windsurf, and Lovable."
-   - **Project URL**: `https://yourusername.github.io/promptfoundry/`
+   - **Project URL**: `https://yourusername.github.io/promptfoudry/`
    - **Associated with**: Your current position or "Personal Project"
 
 ### Featured Section
@@ -62,7 +62,7 @@ Once deployed, you can add this to your LinkedIn profile:
 4. Write a compelling description
 
 ### About Section
-Add a line like: "Creator of PromptFoundry - an open-source collection of production-ready AI development prompts used by developers worldwide."
+Add a line like: "Creator of PromptFlow - an open-source collection of production-ready AI development prompts used by developers worldwide."
 
 ## 📊 Analytics (Optional)
 
@@ -96,4 +96,4 @@ The landing page is fully responsive and optimized for:
 - **Accessible color contrast**
 - **SEO-optimized structure**
 
-Your landing page will be available at: `https://yourusername.github.io/promptfoundry/` 
+Your landing page will be available at: `https://yourusername.github.io/promptfoudry/` 
