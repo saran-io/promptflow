@@ -77,30 +77,42 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <!-- Nice Penguin Logo SVG in Square - Dark Gray -->
-                    <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
-                            <!-- Penguin body -->
-                            <ellipse cx="12" cy="14" rx="5" ry="7" fill="white"/>
-                            <!-- Penguin back -->
-                            <ellipse cx="12" cy="14" rx="4" ry="6" fill="#2D3748"/>
-                            <!-- Penguin belly -->
-                            <ellipse cx="12" cy="15" rx="2.5" ry="4" fill="white"/>
-                            <!-- Penguin head -->
-                            <circle cx="12" cy="8" r="3.5" fill="#2D3748"/>
-                            <!-- Penguin beak -->
-                            <ellipse cx="12" cy="8.5" rx="0.8" ry="0.5" fill="#F6AD55"/>
-                            <!-- Penguin eyes -->
-                            <circle cx="10.5" cy="7.5" r="0.6" fill="white"/>
-                            <circle cx="13.5" cy="7.5" r="0.6" fill="white"/>
-                            <circle cx="10.5" cy="7.5" r="0.3" fill="#2D3748"/>
-                            <circle cx="13.5" cy="7.5" r="0.3" fill="#2D3748"/>
-                            <!-- Penguin wings -->
-                            <ellipse cx="8.5" cy="13" rx="1.5" ry="3" fill="#2D3748" transform="rotate(-20 8.5 13)"/>
-                            <ellipse cx="15.5" cy="13" rx="1.5" ry="3" fill="#2D3748" transform="rotate(20 15.5 13)"/>
-                            <!-- Penguin feet -->
-                            <ellipse cx="10" cy="20" rx="1" ry="0.8" fill="#F6AD55"/>
-                            <ellipse cx="14" cy="20" rx="1" ry="0.8" fill="#F6AD55"/>
+                    <!-- Nice Panda Face Logo SVG with Glassy Effect - Dark Gray -->
+                    <div class="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl flex items-center justify-center shadow-lg backdrop-blur-sm border border-white border-opacity-20">
+                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                            <!-- Panda ears with gradient -->
+                            <circle cx="8" cy="6" r="2.5" fill="url(#pandaGradient)"/>
+                            <circle cx="16" cy="6" r="2.5" fill="url(#pandaGradient)"/>
+                            <!-- Panda head with glassy effect -->
+                            <circle cx="12" cy="12" r="6" fill="white" opacity="0.95"/>
+                            <circle cx="12" cy="12" r="6" fill="url(#glassGradient)" opacity="0.3"/>
+                            <!-- Panda eye patches -->
+                            <ellipse cx="9.5" cy="10" rx="1.8" ry="2.2" fill="url(#pandaGradient)"/>
+                            <ellipse cx="14.5" cy="10" rx="1.8" ry="2.2" fill="url(#pandaGradient)"/>
+                            <!-- Panda eyes with shine -->
+                            <circle cx="9.5" cy="10" r="0.8" fill="white"/>
+                            <circle cx="14.5" cy="10" r="0.8" fill="white"/>
+                            <circle cx="9.5" cy="10" r="0.4" fill="#2D3748"/>
+                            <circle cx="14.5" cy="10" r="0.4" fill="#2D3748"/>
+                            <!-- Eye shine effect -->
+                            <circle cx="9.2" cy="9.7" r="0.15" fill="white" opacity="0.8"/>
+                            <circle cx="14.2" cy="9.7" r="0.15" fill="white" opacity="0.8"/>
+                            <!-- Panda nose -->
+                            <ellipse cx="12" cy="13" rx="0.6" ry="0.4" fill="#2D3748"/>
+                            <!-- Panda mouth -->
+                            <path d="M12 14 Q10.5 15 9 14" stroke="#2D3748" stroke-width="0.5" fill="none"/>
+                            <path d="M12 14 Q13.5 15 15 14" stroke="#2D3748" stroke-width="0.5" fill="none"/>
+                            <!-- Gradients -->
+                            <defs>
+                                <linearGradient id="pandaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4A5568;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#2D3748;stop-opacity:1" />
+                                </linearGradient>
+                                <radialGradient id="glassGradient" cx="30%" cy="30%">
+                                    <stop offset="0%" style="stop-color:white;stop-opacity:0.6" />
+                                    <stop offset="100%" style="stop-color:white;stop-opacity:0" />
+                                </radialGradient>
+                            </defs>
                         </svg>
                     </div>
                     <span class="ml-3 text-xl font-bold text-black">PromptFoundry</span>
@@ -141,30 +153,42 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="animate-float">
                 <div class="flex justify-center mb-6">
-                    <!-- Large Nice Penguin Logo for Hero - Dark Gray -->
-                    <div class="w-20 h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-xl">
-                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none">
-                            <!-- Penguin body -->
-                            <ellipse cx="12" cy="14" rx="5" ry="7" fill="white"/>
-                            <!-- Penguin back -->
-                            <ellipse cx="12" cy="14" rx="4" ry="6" fill="#2D3748"/>
-                            <!-- Penguin belly -->
-                            <ellipse cx="12" cy="15" rx="2.5" ry="4" fill="white"/>
-                            <!-- Penguin head -->
-                            <circle cx="12" cy="8" r="3.5" fill="#2D3748"/>
-                            <!-- Penguin beak -->
-                            <ellipse cx="12" cy="8.5" rx="0.8" ry="0.5" fill="#F6AD55"/>
-                            <!-- Penguin eyes -->
-                            <circle cx="10.5" cy="7.5" r="0.6" fill="white"/>
-                            <circle cx="13.5" cy="7.5" r="0.6" fill="white"/>
-                            <circle cx="10.5" cy="7.5" r="0.3" fill="#2D3748"/>
-                            <circle cx="13.5" cy="7.5" r="0.3" fill="#2D3748"/>
-                            <!-- Penguin wings -->
-                            <ellipse cx="8.5" cy="13" rx="1.5" ry="3" fill="#2D3748" transform="rotate(-20 8.5 13)"/>
-                            <ellipse cx="15.5" cy="13" rx="1.5" ry="3" fill="#2D3748" transform="rotate(20 15.5 13)"/>
-                            <!-- Penguin feet -->
-                            <ellipse cx="10" cy="20" rx="1" ry="0.8" fill="#F6AD55"/>
-                            <ellipse cx="14" cy="20" rx="1" ry="0.8" fill="#F6AD55"/>
+                    <!-- Large Nice Panda Face Logo with Glassy Effect for Hero -->
+                    <div class="w-24 h-24 bg-gradient-to-br from-gray-600 to-gray-800 rounded-3xl flex items-center justify-center shadow-2xl backdrop-blur-sm border border-white border-opacity-30">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none">
+                            <!-- Panda ears with gradient -->
+                            <circle cx="8" cy="6" r="2.5" fill="url(#pandaGradientHero)"/>
+                            <circle cx="16" cy="6" r="2.5" fill="url(#pandaGradientHero)"/>
+                            <!-- Panda head with glassy effect -->
+                            <circle cx="12" cy="12" r="6" fill="white" opacity="0.95"/>
+                            <circle cx="12" cy="12" r="6" fill="url(#glassGradientHero)" opacity="0.4"/>
+                            <!-- Panda eye patches -->
+                            <ellipse cx="9.5" cy="10" rx="1.8" ry="2.2" fill="url(#pandaGradientHero)"/>
+                            <ellipse cx="14.5" cy="10" rx="1.8" ry="2.2" fill="url(#pandaGradientHero)"/>
+                            <!-- Panda eyes with shine -->
+                            <circle cx="9.5" cy="10" r="0.8" fill="white"/>
+                            <circle cx="14.5" cy="10" r="0.8" fill="white"/>
+                            <circle cx="9.5" cy="10" r="0.4" fill="#2D3748"/>
+                            <circle cx="14.5" cy="10" r="0.4" fill="#2D3748"/>
+                            <!-- Eye shine effect -->
+                            <circle cx="9.2" cy="9.7" r="0.2" fill="white" opacity="0.9"/>
+                            <circle cx="14.2" cy="9.7" r="0.2" fill="white" opacity="0.9"/>
+                            <!-- Panda nose -->
+                            <ellipse cx="12" cy="13" rx="0.6" ry="0.4" fill="#2D3748"/>
+                            <!-- Panda mouth -->
+                            <path d="M12 14 Q10.5 15 9 14" stroke="#2D3748" stroke-width="0.6" fill="none"/>
+                            <path d="M12 14 Q13.5 15 15 14" stroke="#2D3748" stroke-width="0.6" fill="none"/>
+                            <!-- Gradients -->
+                            <defs>
+                                <linearGradient id="pandaGradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4A5568;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#2D3748;stop-opacity:1" />
+                                </linearGradient>
+                                <radialGradient id="glassGradientHero" cx="25%" cy="25%">
+                                    <stop offset="0%" style="stop-color:white;stop-opacity:0.7" />
+                                    <stop offset="100%" style="stop-color:white;stop-opacity:0" />
+                                </radialGradient>
+                            </defs>
                         </svg>
                     </div>
                 </div>
@@ -378,22 +402,22 @@ Props: <br>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-primary-600 text-white">
+    <section class="py-20 bg-gray-100 text-gray-900">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold mb-4">Ready to Accelerate Your Development?</h2>
-            <p class="text-xl mb-8 text-primary-100">
+            <p class="text-xl mb-8 text-gray-600">
                 Join thousands of developers using PromptFoundry to build better software faster.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://github.com/saran-io/promptfoundry" 
-                   class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center">
+                <a href="https://github.com/saran-io/promptfoudry" 
+                   class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors inline-flex items-center justify-center">
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
                     </svg>
                     View on GitHub
                 </a>
                 <a href="https://github.com/saran-io/promptfoudry/blob/main/docs/getting-started.md" 
-                   class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                   class="border-2 border-gray-400 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 hover:text-gray-900 transition-colors">
                     Documentation
                 </a>
             </div>
@@ -406,30 +430,42 @@ Props: <br>
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="col-span-2">
                     <div class="flex items-center mb-4">
-                        <!-- Nice Penguin Logo SVG for Footer -->
-                        <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                                <!-- Penguin body -->
-                                <ellipse cx="12" cy="14" rx="5" ry="7" fill="white"/>
-                                <!-- Penguin back -->
-                                <ellipse cx="12" cy="14" rx="4" ry="6" fill="#2D3748"/>
-                                <!-- Penguin belly -->
-                                <ellipse cx="12" cy="15" rx="2.5" ry="4" fill="white"/>
-                                <!-- Penguin head -->
-                                <circle cx="12" cy="8" r="3.5" fill="#2D3748"/>
-                                <!-- Penguin beak -->
-                                <ellipse cx="12" cy="8.5" rx="0.8" ry="0.5" fill="#F6AD55"/>
-                                <!-- Penguin eyes -->
-                                <circle cx="10.5" cy="7.5" r="0.6" fill="white"/>
-                                <circle cx="13.5" cy="7.5" r="0.6" fill="white"/>
-                                <circle cx="10.5" cy="7.5" r="0.3" fill="#2D3748"/>
-                                <circle cx="13.5" cy="7.5" r="0.3" fill="#2D3748"/>
-                                <!-- Penguin wings -->
-                                <ellipse cx="8.5" cy="13" rx="1.5" ry="3" fill="#2D3748" transform="rotate(-20 8.5 13)"/>
-                                <ellipse cx="15.5" cy="13" rx="1.5" ry="3" fill="#2D3748" transform="rotate(20 15.5 13)"/>
-                                <!-- Penguin feet -->
-                                <ellipse cx="10" cy="20" rx="1" ry="0.8" fill="#F6AD55"/>
-                                <ellipse cx="14" cy="20" rx="1" ry="0.8" fill="#F6AD55"/>
+                        <!-- Nice Panda Face Logo SVG with Glassy Effect for Footer -->
+                        <div class="w-10 h-10 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex items-center justify-center shadow-md backdrop-blur-sm border border-white border-opacity-15">
+                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none">
+                                <!-- Panda ears with gradient -->
+                                <circle cx="8" cy="6" r="2.5" fill="url(#pandaGradientFooter)"/>
+                                <circle cx="16" cy="6" r="2.5" fill="url(#pandaGradientFooter)"/>
+                                <!-- Panda head with glassy effect -->
+                                <circle cx="12" cy="12" r="6" fill="white" opacity="0.95"/>
+                                <circle cx="12" cy="12" r="6" fill="url(#glassGradientFooter)" opacity="0.25"/>
+                                <!-- Panda eye patches -->
+                                <ellipse cx="9.5" cy="10" rx="1.8" ry="2.2" fill="url(#pandaGradientFooter)"/>
+                                <ellipse cx="14.5" cy="10" rx="1.8" ry="2.2" fill="url(#pandaGradientFooter)"/>
+                                <!-- Panda eyes with shine -->
+                                <circle cx="9.5" cy="10" r="0.8" fill="white"/>
+                                <circle cx="14.5" cy="10" r="0.8" fill="white"/>
+                                <circle cx="9.5" cy="10" r="0.4" fill="#2D3748"/>
+                                <circle cx="14.5" cy="10" r="0.4" fill="#2D3748"/>
+                                <!-- Eye shine effect -->
+                                <circle cx="9.2" cy="9.7" r="0.12" fill="white" opacity="0.8"/>
+                                <circle cx="14.2" cy="9.7" r="0.12" fill="white" opacity="0.8"/>
+                                <!-- Panda nose -->
+                                <ellipse cx="12" cy="13" rx="0.6" ry="0.4" fill="#2D3748"/>
+                                <!-- Panda mouth -->
+                                <path d="M12 14 Q10.5 15 9 14" stroke="#2D3748" stroke-width="0.4" fill="none"/>
+                                <path d="M12 14 Q13.5 15 15 14" stroke="#2D3748" stroke-width="0.4" fill="none"/>
+                                <!-- Gradients -->
+                                <defs>
+                                    <linearGradient id="pandaGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#4A5568;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#2D3748;stop-opacity:1" />
+                                    </linearGradient>
+                                    <radialGradient id="glassGradientFooter" cx="30%" cy="30%">
+                                        <stop offset="0%" style="stop-color:white;stop-opacity:0.5" />
+                                        <stop offset="100%" style="stop-color:white;stop-opacity:0" />
+                                    </radialGradient>
+                                </defs>
                             </svg>
                         </div>
                         <span class="ml-3 text-xl font-bold">PromptFoundry</span>
@@ -440,7 +476,7 @@ Props: <br>
                     <div class="flex space-x-4">
                         <a href="https://github.com/saran-io/promptfoundry" class="text-gray-400 hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"/>
                             </svg>
                         </a>
                         <a href="https://twitter.com/promptfoundry" class="text-gray-400 hover:text-white transition-colors">
