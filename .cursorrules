@@ -1,0 +1,265 @@
+# PromptFlow Clean Code Rules
+# These rules ensure consistent, maintainable, and high-quality code across the entire project
+
+## 🎯 Core Principles
+
+### 1. Clarity Over Cleverness
+- Write code that tells a story
+- Prefer explicit over implicit
+- Use descriptive names that explain intent
+- Avoid abbreviations and cryptic variable names
+
+### 2. Consistency is King
+- Follow established patterns within the codebase
+- Use consistent naming conventions across all files
+- Maintain uniform code structure and organization
+- Apply the same formatting rules everywhere
+
+### 3. Documentation as Code
+- Every prompt must have clear usage examples
+- Include context and expected outcomes
+- Document edge cases and limitations
+- Keep documentation up-to-date with changes
+
+## 📝 File Naming & Organization
+
+### Directory Structure
+- Use kebab-case for all directory names: `code-generation`, `ui-ux`
+- Group related prompts logically by tool and category
+- Maintain parallel structure across tool directories
+- Keep directory names descriptive and specific
+
+### File Naming
+- Use kebab-case for all files: `react-component-generator.md`
+- Include version numbers when applicable: `api-docs-v2.md`
+- Use descriptive names that indicate purpose
+- Avoid generic names like `prompt.md` or `template.md`
+
+### File Organization
+```
+prompts/
+├── [tool]/
+│   ├── [category]/
+│   │   ├── [specific-prompt].md
+│   │   ├── examples/
+│   │   └── README.md
+```
+
+## 🔤 Naming Conventions
+
+### Variables & Functions (when applicable)
+- Use camelCase for JavaScript/TypeScript: `generatePrompt`
+- Use snake_case for Python: `generate_prompt`
+- Use PascalCase for classes and components: `PromptGenerator`
+- Use SCREAMING_SNAKE_CASE for constants: `MAX_PROMPT_LENGTH`
+
+### Markdown Headers
+- Use sentence case: "Getting started with prompts"
+- Be specific and actionable: "How to generate React components"
+- Avoid generic headers like "Introduction" or "Overview"
+
+### Prompt Titles
+- Use descriptive, action-oriented titles
+- Include the target outcome: "Generate responsive React component with TypeScript"
+- Specify the tool when relevant: "Cursor: Advanced code refactoring assistant"
+
+## 📋 Code Structure & Formatting
+
+### Markdown Structure
+```markdown
+# [Descriptive Title]
+
+## 🎯 Purpose
+Brief description of what this prompt achieves
+
+## 🔧 Usage
+Step-by-step instructions
+
+## 📝 Prompt
+```
+[The actual prompt content]
+```
+
+## 💡 Examples
+Real-world usage examples
+
+## ⚠️ Notes
+Important considerations and limitations
+```
+
+### Code Blocks
+- Always specify language for syntax highlighting
+- Include complete, runnable examples
+- Add comments explaining complex logic
+- Use consistent indentation (2 spaces for web, 4 for Python)
+
+### Lists and Formatting
+- Use bullet points for unordered lists
+- Use numbered lists for sequential steps
+- Use consistent emoji usage for visual hierarchy
+- Bold important terms and concepts
+
+## 🧹 Content Quality Standards
+
+### Prompt Writing
+- Write clear, unambiguous instructions
+- Include context and constraints
+- Specify expected output format
+- Provide examples of good and bad outputs
+- Test prompts before committing
+
+### Documentation
+- Write for your future self and teammates
+- Include "why" not just "what"
+- Update docs when changing functionality
+- Use active voice and present tense
+- Keep sentences concise and scannable
+
+### Examples
+- Provide realistic, practical examples
+- Show both input and expected output
+- Include edge cases and error scenarios
+- Use placeholder data that's meaningful
+- Test all examples before publishing
+
+## 🔍 Code Review Standards
+
+### Before Committing
+- [ ] All prompts tested and working
+- [ ] Documentation is complete and accurate
+- [ ] Examples are realistic and tested
+- [ ] File naming follows conventions
+- [ ] No typos or grammatical errors
+- [ ] Links are working and up-to-date
+
+### Review Checklist
+- [ ] Code follows established patterns
+- [ ] Naming is clear and consistent
+- [ ] Documentation explains the "why"
+- [ ] Examples are comprehensive
+- [ ] No duplicate or redundant content
+- [ ] Performance considerations addressed
+
+## 🚫 Anti-Patterns to Avoid
+
+### Content Anti-Patterns
+- Generic, one-size-fits-all prompts
+- Prompts without examples or context
+- Outdated or broken examples
+- Inconsistent formatting across files
+- Missing or incomplete documentation
+
+### Code Anti-Patterns
+- Hardcoded values without explanation
+- Complex logic without comments
+- Inconsistent naming conventions
+- Missing error handling in examples
+- Untested code snippets
+
+### Organization Anti-Patterns
+- Files in wrong directories
+- Duplicate content across multiple files
+- Broken internal links
+- Inconsistent directory structure
+- Missing README files in directories
+
+## 🎨 UI/UX Content Guidelines
+
+### Component Descriptions
+- Describe visual appearance clearly
+- Specify responsive behavior
+- Include accessibility requirements
+- Mention browser compatibility
+- Provide design system context
+
+### Design Prompts
+- Include specific design requirements
+- Mention color schemes and typography
+- Specify layout and spacing
+- Include interaction patterns
+- Consider mobile-first approach
+
+## 🔧 Tool-Specific Guidelines
+
+### Cursor Prompts
+- Focus on code generation and refactoring
+- Include IDE-specific shortcuts and features
+- Provide debugging and optimization tips
+- Consider workspace context
+
+### V0.dev Prompts
+- Emphasize component reusability
+- Include design system integration
+- Focus on responsive design
+- Provide styling guidelines
+
+### Windsurf Prompts
+- Consider full-stack implications
+- Include deployment considerations
+- Focus on scalability and performance
+- Provide infrastructure context
+
+### Lovable Prompts
+- Emphasize rapid prototyping
+- Focus on MVP development
+- Include user experience considerations
+- Provide iteration strategies
+
+## 📊 Performance & Optimization
+
+### Content Performance
+- Keep prompts concise but complete
+- Use clear, specific language
+- Avoid unnecessary complexity
+- Optimize for quick scanning
+- Include performance considerations in examples
+
+### File Organization
+- Group related content together
+- Use meaningful directory structures
+- Avoid deeply nested hierarchies
+- Keep file sizes reasonable
+- Use cross-references effectively
+
+## 🔒 Security & Best Practices
+
+### Sensitive Information
+- Never include real API keys or secrets
+- Use placeholder values in examples
+- Sanitize any real data in examples
+- Consider privacy implications
+- Follow security best practices in code examples
+
+### Validation
+- Validate all external links regularly
+- Test prompts with different inputs
+- Verify examples work as expected
+- Check for accessibility compliance
+- Ensure cross-platform compatibility
+
+## 🚀 Continuous Improvement
+
+### Regular Maintenance
+- Review and update content quarterly
+- Remove outdated or broken examples
+- Improve based on user feedback
+- Keep up with tool updates
+- Refactor when patterns emerge
+
+### Quality Metrics
+- Track prompt effectiveness
+- Monitor user engagement
+- Collect feedback systematically
+- Measure documentation completeness
+- Assess code quality regularly
+
+## 🎯 Enforcement
+
+These rules should be:
+- Applied to all new content
+- Used during code reviews
+- Referenced in pull request templates
+- Integrated into CI/CD processes
+- Updated as the project evolves
+
+Remember: Clean code is not just about following rules—it's about creating a codebase that's maintainable, understandable, and valuable to the community. 

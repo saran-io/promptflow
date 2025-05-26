@@ -1,0 +1,342 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Clean Code Rules
+
+## 🎯 Core Clean Code Principles
+
+### 1. Readability and Understandability
+
+#### Meaningful Names
+- Use descriptive, intention-revealing names for variables, functions, and classes
+- Avoid abbreviations, acronyms, and cryptic names
+- Use searchable names for important concepts
+- Use pronounceable names that can be discussed verbally
+- Use consistent vocabulary throughout the codebase
+
+```typescript
+// ✅ Good
+const userAccountBalance = calculateUserBalance(userId);
+const isEmailValid = validateEmailFormat(email);
+
+// ❌ Bad
+const bal = calc(id);
+const chk = val(e);
+```
+
+#### Small Functions
+- Keep functions short (ideally 20 lines or fewer)
+- Each function should have a single responsibility
+- Functions should do one thing and do it well
+- Use descriptive function names that explain what they do
+- Prefer many small functions over few large ones
+
+```typescript
+// ✅ Good
+function validateUserInput(input: string): boolean {
+  return isNotEmpty(input) && isValidFormat(input);
+}
+
+function isNotEmpty(value: string): boolean {
+  return value.trim().length > 0;
+}
+
+// ❌ Bad
+function processUser(input: string): any {
+  // 50+ lines of mixed validation, processing, and formatting
+}
+```
+
+#### Consistent Formatting
+- Use consistent indentation (2 spaces for web, 4 for Python)
+- Apply consistent spacing around operators and brackets
+- Use consistent line breaks and code organization
+- Follow established formatting conventions for the language
+- Use automated formatters (Prettier, Black, etc.)
+
+#### Clear Comments
+- Explain WHY, not WHAT the code does
+- Avoid redundant comments that restate the code
+- Use comments for complex business logic or algorithms
+- Keep comments up-to-date with code changes
+- Remove commented-out code
+
+```typescript
+// ✅ Good
+// Using exponential backoff to handle rate limiting from the API
+const delay = Math.pow(2, retryCount) * 1000;
+
+// ❌ Bad
+// Increment i by 1
+i++;
+```
+
+#### Code Structure
+- Organize code into logical modules and packages
+- Group related functionality together
+- Use clear directory and file naming conventions
+- Separate concerns into different layers (UI, business logic, data)
+- Follow established architectural patterns
+
+#### Effective Whitespace
+- Use blank lines to separate logical blocks
+- Group related statements together
+- Separate functions and classes with appropriate spacing
+- Use indentation to show code hierarchy
+- Avoid excessive blank lines
+
+### 2. Maintainability and Scalability
+
+#### Don't Repeat Yourself (DRY)
+- Extract common logic into reusable functions or modules
+- Use constants for repeated values
+- Create utility functions for common operations
+- Avoid copy-paste programming
+- Use inheritance or composition to share behavior
+
+```typescript
+// ✅ Good
+const API_BASE_URL = 'https://api.example.com';
+const DEFAULT_TIMEOUT = 5000;
+
+function makeApiRequest(endpoint: string, options?: RequestOptions) {
+  return fetch(`${API_BASE_URL}${endpoint}`, {
+    timeout: DEFAULT_TIMEOUT,
+    ...options
+  });
+}
+
+// ❌ Bad
+fetch('https://api.example.com/users', { timeout: 5000 });
+fetch('https://api.example.com/posts', { timeout: 5000 });
+fetch('https://api.example.com/comments', { timeout: 5000 });
+```
+
+#### Single Responsibility Principle (SRP)
+- Each class or module should have one reason to change
+- Functions should do one thing well
+- Separate data access, business logic, and presentation
+- Use dependency injection for better separation
+- Keep interfaces focused and cohesive
+
+#### Loose Coupling
+- Minimize dependencies between modules
+- Use interfaces and abstractions instead of concrete implementations
+- Avoid deep inheritance hierarchies
+- Use dependency injection and inversion of control
+- Design for testability and modularity
+
+```typescript
+// ✅ Good
+interface EmailService {
+  sendEmail(to: string, subject: string, body: string): Promise<void>;
+}
+
+class UserService {
+  constructor(private emailService: EmailService) {}
+  
+  async notifyUser(userId: string, message: string) {
+    const user = await this.getUser(userId);
+    await this.emailService.sendEmail(user.email, 'Notification', message);
+  }
+}
+
+// ❌ Bad
+class UserService {
+  async notifyUser(userId: string, message: string) {
+    const user = await this.getUser(userId);
+    // Directly coupled to specific email implementation
+    const emailer = new GmailService();
+    await emailer.send(user.email, 'Notification', message);
+  }
+}
+```
+
+#### Testability
+- Write unit tests for all business logic
+- Use dependency injection for easier mocking
+- Keep functions pure when possible (no side effects)
+- Separate I/O operations from business logic
+- Aim for high test coverage on critical paths
+
+#### Regular Refactoring
+- Continuously improve code structure
+- Remove dead code and unused dependencies
+- Simplify complex conditional logic
+- Extract methods and classes when they grow too large
+- Update outdated patterns and practices
+
+### 3. Error Handling and Robustness
+
+#### Robust Error Handling
+- Use proper exception handling mechanisms
+- Provide meaningful error messages
+- Log errors appropriately for debugging
+- Fail fast when encountering invalid states
+- Use error types that provide context
+
+```typescript
+// ✅ Good
+class UserNotFoundError extends Error {
+  constructor(userId: string) {
+    super(`User with ID ${userId} not found`);
+    this.name = 'UserNotFoundError';
+  }
+}
+
+async function getUser(userId: string): Promise<User> {
+  try {
+    const user = await userRepository.findById(userId);
+    if (!user) {
+      throw new UserNotFoundError(userId);
+    }
+    return user;
+  } catch (error) {
+    logger.error('Failed to retrieve user', { userId, error });
+    throw error;
+  }
+}
+
+// ❌ Bad
+async function getUser(userId: string) {
+  const user = await userRepository.findById(userId);
+  return user; // Could return undefined without warning
+}
+```
+
+#### Avoid Hardcoding
+- Use configuration files for environment-specific values
+- Define constants for magic numbers and strings
+- Use environment variables for sensitive data
+- Make configurable what might need to change
+- Use feature flags for experimental features
+
+```typescript
+// ✅ Good
+const CONFIG = {
+  API_TIMEOUT: process.env.API_TIMEOUT || 5000,
+  MAX_RETRY_ATTEMPTS: 3,
+  CACHE_TTL: 300000 // 5 minutes
+};
+
+// ❌ Bad
+setTimeout(callback, 5000); // Magic number
+if (retryCount > 3) return; // Magic number
+```
+
+### 4. Design Patterns and Best Practices
+
+#### Follow Coding Conventions
+- Use consistent naming conventions (camelCase, PascalCase, kebab-case)
+- Follow language-specific style guides
+- Use linting tools to enforce consistency
+- Document and share team conventions
+- Review and update conventions regularly
+
+#### Apply Design Patterns
+- Use Factory pattern for object creation
+- Apply Observer pattern for event handling
+- Use Strategy pattern for algorithm selection
+- Apply Repository pattern for data access
+- Use Decorator pattern for extending functionality
+
+```typescript
+// ✅ Good - Strategy Pattern
+interface PaymentStrategy {
+  processPayment(amount: number): Promise<PaymentResult>;
+}
+
+class CreditCardPayment implements PaymentStrategy {
+  async processPayment(amount: number): Promise<PaymentResult> {
+    // Credit card processing logic
+  }
+}
+
+class PayPalPayment implements PaymentStrategy {
+  async processPayment(amount: number): Promise<PaymentResult> {
+    // PayPal processing logic
+  }
+}
+
+class PaymentProcessor {
+  constructor(private strategy: PaymentStrategy) {}
+  
+  async process(amount: number): Promise<PaymentResult> {
+    return this.strategy.processPayment(amount);
+  }
+}
+```
+
+## 🔍 Code Review Checklist
+
+### Before Committing
+- [ ] All functions have single responsibility
+- [ ] Names are descriptive and meaningful
+- [ ] No code duplication (DRY principle)
+- [ ] Proper error handling implemented
+- [ ] No hardcoded values
+- [ ] Code is properly formatted and consistent
+- [ ] Comments explain complex logic
+- [ ] Unit tests cover new functionality
+- [ ] No unused imports or variables
+- [ ] Performance considerations addressed
+
+### During Review
+- [ ] Code follows established patterns
+- [ ] Abstractions are appropriate
+- [ ] Dependencies are minimized
+- [ ] Error cases are handled
+- [ ] Code is readable and maintainable
+- [ ] Security considerations addressed
+- [ ] Documentation is updated
+
+## 🚫 Anti-Patterns to Avoid
+
+### Code Smells
+- Long functions (>20-30 lines)
+- Large classes with multiple responsibilities
+- Deep nesting (>3-4 levels)
+- Long parameter lists (>3-4 parameters)
+- Duplicate code blocks
+- Magic numbers and strings
+- God objects that do everything
+- Tight coupling between modules
+
+### Bad Practices
+- Ignoring errors or exceptions
+- Using global variables excessively
+- Premature optimization
+- Over-engineering simple solutions
+- Inconsistent naming conventions
+- Leaving commented-out code
+- Not writing tests
+- Hardcoding configuration values
+
+## 🎯 Language-Specific Guidelines
+
+### JavaScript/TypeScript
+- Use `const` and `let` instead of `var`
+- Prefer arrow functions for callbacks
+- Use async/await over Promise chains
+- Implement proper TypeScript types
+- Use optional chaining and nullish coalescing
+
+### Python
+- Follow PEP 8 style guidelines
+- Use list comprehensions appropriately
+- Implement proper exception handling
+- Use type hints for better code documentation
+- Follow the Zen of Python principles
+
+### General
+- Use version control effectively with meaningful commit messages
+- Keep dependencies up to date
+- Use automated testing and CI/CD
+- Monitor code quality metrics
+- Regular code reviews and pair programming
+
+---
+
+📖 **Full Project Rules**: See [.cursorrules](mdc:../../.cursorrules) for PromptFlow-specific standards
